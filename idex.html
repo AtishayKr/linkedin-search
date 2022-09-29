@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    First Name: <input type="text" id="fname" placeholder="Fist Name" /><br />
+    last Name: <input type="text" id="lname" placeholder="Last Name" />
+
+    <button onclick="myFunction()">search</button>
+
+    <script>
+      function myFunction() {
+        var firstName = document.getElementById("fname").value;
+        var lastName = document.getElementById("lname").value;
+
+        var url =
+          "https://www.linkedin.com/search/results/people/?heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAABRHpCgBjtbMpr91kqDIhPvzvLbO4IbexBk&keywords=" +
+          firstName +
+          "%20" +
+          lastName +
+          "&origin=FACETED_SEARCH&position=0&schoolFilter=%5B%227942020%22%2C%229584148%22%5D&searchId=6696e51e-7e04-417a-b44d-804d42981f77&sid=MG8";
+        window.open(url);
+      }
+    </script>
+  </body>
+</html>
